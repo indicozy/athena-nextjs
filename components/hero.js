@@ -39,7 +39,7 @@ import { Pagination } from "./pagination";
 
 export const Hero = (props) => {
   const [coursesDocument, setCoursesDocument] = useState([]);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
   let [totalPages, setTotalPages] = useState(10);
   let [totalCourses, setTotalCourses] = useState(0);
 
@@ -48,6 +48,7 @@ export const Hero = (props) => {
   const [lang, setLang] = useState("");
 
   function activateLasers(event) {
+    if (page === 0) setPage(1);
     event.preventDefault();
     fetch(
       `https://api.liberoproject.kz/courses?title=${courseName}&page=${page}&is_paid=${price}&lang=${lang}&count=16&`
