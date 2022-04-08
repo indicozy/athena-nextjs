@@ -1,0 +1,7 @@
+- [x] Pagination
+- [x] Filter via
+  - [x] Language
+  - [x] Price
+- Hooks to parent
+- Three JS
+- Deploy to DO
