@@ -76,8 +76,8 @@ export const Card = (props) => {
     tags.push(tag(course["difficulties_name"]));
   if (course["locales_title"] !== null) tags.push(tag(course["locales_title"]));
   return (
-    <Box w="320px">
-      <Box width="320px" borderWidth="1px" borderRadius="xl" p={2} m={2}>
+    <Box>
+      <Box borderWidth="1px" borderRadius="xl" p={2} m={2}>
         <Stack>
           <Link href={course["courses_url"]}>
             <AspectRatio ratio={16 / 9}>
