@@ -1,5 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import Head from "next/head";
+import Title from "next/head";
 import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
@@ -25,6 +26,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <Title>Поисковик Athena | Школа Программирования Op-Onai</Title>
       </Head>
       <ChakraProvider theme={theme}>
         <Component {...pageProps} />

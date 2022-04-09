@@ -9,6 +9,9 @@ import { Header } from "../components/header";
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Поисковик Курсов Athena | Школа Программирования Op-Onai</title>
+      </Head>
       <Header />
       <Hero />
       <CTA />
