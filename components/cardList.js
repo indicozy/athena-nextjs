@@ -43,7 +43,7 @@ export const CardList = (props) => {
   let page = props.page;
 
   if (result === undefined)
-    return <Container maxW="8xl" my="20" id="results"></Container>;
+    return <Container maxW="8xl" my="20" h="100vh" id="results"></Container>;
   let coursesList = [];
 
   let totalCourses = result["courses"]["total"];
