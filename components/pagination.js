@@ -34,6 +34,8 @@ import { Flex, Spacer } from "@chakra-ui/react";
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 
 export const Pagination = (props) => {
+  let activateLasers = props.valueClick;
+
   let buttons = [];
   const page = parseInt(props.page);
   const maxPage = parseInt(props.maxPage);
@@ -48,13 +50,17 @@ export const Pagination = (props) => {
     if (i == page) buttons.push(<Button variant="solid">{i}</Button>);
     else
       buttons.push(
-        <Button value={i} onClick={props.onClick} variant="outline">
+        <Button
+          value={i}
+          onClick={(event) => activateLasers(event, i)}
+          variant="outline"
+        >
           {i}
         </Button>
       );
   }
   return (
-    <Center py={30} spac>
+    <Center py={30}>
       <HStack>
         <ButtonGroup size="sm" colorScheme="teal">
           {buttons}
